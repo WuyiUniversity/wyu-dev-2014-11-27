@@ -3,13 +3,13 @@
 
 //一般人这么写
 $saying = "A commmit a day keep bugs away.";
-for ($i = 0; $i <= strlen($saying); $i++) {
+for ($i = 0; $i < strlen($saying); $i++) {
 	echo $saying[$i];
 }
 
 //这么写更好
 $saying = "A commmit a day keep bugs away.";
 $len = strlen($saying);
-for ($i = 0; $i <= $len; $i++) {
+for ($i = 0; $i < $len; $i++) {
 	echo $saying[$i];
 }
