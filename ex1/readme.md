@@ -2,6 +2,7 @@
 ---
 
 1.随机生成2组10000个数字[1,10000]并合并
+
 ```shell
 jayin:ex1 jayin$ time php good1s.php
 
