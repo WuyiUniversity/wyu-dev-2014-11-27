@@ -11,4 +11,4 @@ bool session_set_save_handler ( SessionHandlerInterface $sessionhandler [, bool 
 
 ```
 
-see [demo](MemcacheSession.php)
+see [demo](Memcache.php) implementation by ThinkPHP.

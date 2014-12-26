@@ -1,5 +1,6 @@
 <?php
-class MemcacheSession implements SessionHandlerInterface {
+
+class Memcache {
 	protected $lifeTime = 3600;
 	protected $sessionName = '';
 	protected $handle = null;
