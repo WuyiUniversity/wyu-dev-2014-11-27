@@ -26,7 +26,7 @@ sys     0m0.028s
 
 2. 善用函数：不同函数之间也有不同效率(实现方式不一样)
 
-以isset()array_key_exists()为例
+以isset()  array_key_exists()为例
 
 ```shell
 
