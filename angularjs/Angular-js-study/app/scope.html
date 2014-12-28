@@ -1,0 +1,39 @@
+<html ng-app="MyModule">
+
+<head>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <meta charset="utf-8">
+    <script src="Augular/1.3.0.14/angular.js"></script>
+    <script src="Augular/1.3.0.14/angular-animate.js"></script>
+    <script src="Augular/expand/angular-ui-router.js"></script>
+    <script src="js/scope.js"></script>
+</head>
+
+<body>
+    <div ng-controller="MyCtrl">
+        <input ng-model="ctrlFlavor">
+        <h1>{{ctrlFlavor}}</h1>
+        <h1><drink flavor="{{ctrlFlavor}}"></drink></h1>
+    </div>
+
+
+    <div ng-controller="MyCtrl1">
+        Ctrl:
+        <br>
+        <input type="text" ng-model="ctrlFlavor">
+        <br> Directive:
+        <br>
+        <drink1 flavor="ctrlFlavor"></drink1>
+
+
+        <div ng-controller="MyCtrl2">
+            <greeting greet="sayHello(name)"></greeting>
+            <greeting greet="sayHello(name)"></greeting>
+            <greeting greet="sayHello(name)"></greeting>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

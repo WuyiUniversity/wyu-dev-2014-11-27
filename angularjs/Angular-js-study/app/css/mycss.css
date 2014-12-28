@@ -1,0 +1,109 @@
+.red{
+color: red;
+}
+.green{
+    color: green;
+}
+
+/* 自定义一个动画效果，名字叫做myfirst  */
+@keyframes myfirst  
+{
+from {background: red;}
+to {background: yellow;}
+}
+/* 从上面字面上的意思可以理解，就是两个背景颜色的互换 */
+
+/* @-moz-keyframes myfirst Firefox
+{
+from {background: red;}
+to {background: yellow;}
+}
+
+@-webkit-keyframes myfirst Safari 和 Chrome
+{
+from {background: red;}
+to {background: yellow;}
+}
+
+@-o-keyframes myfirst Opera
+{
+from {background: red;}
+to {background: yellow;}
+}
+ */
+
+
+@keyframes mytwo
+{
+0%   {background: red;}
+25%  {background: yellow;}
+50%  {background: blue;}
+100% {background: green;}
+}
+
+/* 动画是使元素从一种样式逐渐变化为另一种样式的效果。
+
+您可以改变任意多的样式任意多的次数。
+
+请用百分比来规定变化发生的时间，或用关键词 "from" 和 "to"，等同于 0% 和 100%。
+
+0% 是动画的开始，100% 是动画的完成。
+
+为了得到最佳的浏览器支持，您应该始终定义 0% 和 100% 选择器。 */
+
+
+@keyframes mythree
+{
+0%   {background: red; left:0px; top:0px;}
+25%  {background: yellow; left:200px; top:500px; width:10px; }
+50%  {background: blue; left:200px; top:200px;}
+75%  {background: green; left:0px; top:200px;}
+100% {background: red; left:0px; top:0px;}
+}
+
+
+@keyframes  css-leave {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    30% {
+        transform: rotateZ(10deg);
+        animation-timing-function: ease-out;
+    }
+    40% {
+        transform: rotateZ(17deg);
+    }
+    60% {
+        transform: rotateZ(16deg);
+    }
+    80% {
+        transform: rotateZ(17deg);
+    }
+    90% {
+        transform: rotateZ(10deg);
+        animation-timing-function: ease-out;
+    }
+    
+    100% {
+        top: 800px;
+        transform: translateY(100%) rotateZ(17deg);
+    }
+}
+
+.css3{
+width:100px;
+height:100px;
+background-color: red;
+/* 调用 animation 属性，参数1 是自定义动画的名称，参数2 是规定动画时间 */
+/* animation: mythree 5s ease-in-out 0s 3 alternate;  
+ -moz-animation: myfirst 5s; Firefox
+-webkit-animation: myfirst 5s;  Safari 和 Chrome
+-o-animation: myfirst 5s;   Opera */
+
+transform:translate3d(10,10,120);
+}
+
+.css3.ng-leave{
+    animation: css-leave 1s;
+}
+

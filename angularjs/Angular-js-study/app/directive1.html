@@ -1,0 +1,42 @@
+<html ng-app="MyDirective">
+
+<head>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/mycss.css">
+    <link rel="stylesheet" href="css/index.css">
+    <meta charset="utf-8">
+    <script src="Augular/1.3.0.14/angular.js"></script>
+    <script src="Augular/1.3.0.14/angular-animate.js"></script>
+    <script src="Augular/expand/angular-ui-router.js"></script>
+    <script src="js/directive.js"></script>
+</head>
+
+<body>
+    <div>
+        <!-- 下面是指令的定义 -->
+        <!-- 下面是标签的形式 -->
+        <hello></hello>
+        <!-- 下面是属性的形式 -->
+        <div hello></div>
+        <!-- 下面是css 样式的形式 -->
+        <div class="hello"></div>
+        <!-- directive:hello -->
+        <div>
+
+        </div>
+        <div ng-controller="myhello1">
+            <hello1 HowToLoad="loadData()" a="1">
+                <div> 这是hello1 的内容</div>
+            </hello1>
+        </div>
+        <div ng-controller="myhello2">
+            <hello1 HowToLoad="loadData2()" a="2">
+                <div> 这是hello1 的内容</div>
+            </hello1>
+        </div>
+    </div>
+
+</body>
+
+
+</html>

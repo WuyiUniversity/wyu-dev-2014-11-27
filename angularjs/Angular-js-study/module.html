@@ -1,0 +1,57 @@
+<!-- 这是运用了模块化的例子 -->
+
+<html ng-app="myApp">
+<head ></head>
+<body>
+    <div ng-controller="ShowMsg">
+        <p>{{Msg.text}}</p>
+    </div>
+
+
+<form ng-controller="Update" ng-submit="reqFunding()">
+    StartUp: <input ng-change="compute()" ng-model="funding.str">
+    Show: {{funding.need}}
+    
+    <button>Fun My startup </button>
+</form>
+
+
+<hello></hello>
+
+
+<div ng-controller="ctr1"> 
+    <!-- 这是第一个控制器 -->
+    本地的scope定义了text.name: {{text.name}}
+    <br>
+    根scope 上定义了text1.rootmsg : {{text1.rootmsg}}
+</div>
+
+<div ng-controller="ctr2">
+ <!-- 这里是第二个控制器  -->
+
+ 这里控制没有定义rootmsg ：{{text1.rootmsg}}
+    
+</div>
+
+
+
+<div ng-controller="EventCtr">
+    root count ：{{count}}
+    <ul>
+        <li  ng-controller="EventCtr"  >
+            <button ng-click="$emit('myEvent')">向上触发</button>
+            <button ng-click="$broadcast('myEvent')">向下触发</button>
+             同等级count {{count}}
+            <ul>
+                <li   ng-controller="EventCtr">低等级 count  {{count}} </li>
+            </ul>
+        </li>
+        
+    </ul>
+</div>
+
+
+<script type="text/javascript" src="js/angular.js"></script>
+  <script type="text/javascript" src="controllers/controller.js" ></script>
+</body>
+</html>

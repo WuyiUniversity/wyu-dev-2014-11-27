@@ -1,0 +1,50 @@
+<html ng-app>
+
+<!-- 这是一个angular 快速入门的例子 -->
+<head content="text/html; charset=utf-8" >
+    
+</head>
+<body>
+   <h1>hello world</h1> 
+   <div  ng-controller="HelloController">  
+    <!-- 这里就是定义了一个控制器 -->
+   <p>{{greeting.text}},world</p>
+   </div>
+
+
+   <div ng-controller="Cinput">
+       <!-- 定义了一个input 控制器  看看数据是怎么双向绑定的-->
+       <input ng-model="greeting.text">
+       <p>{{greeting.text}},Angular</p>
+   </div>
+
+
+<div ng-controller="ShoppingCart">
+    <!-- 下面是一个综合例子 ShoppingCart -->
+
+     <table>
+        <tr>
+           <td>名称</td>
+           <td>数量</td>
+           <td>单价</td>
+           <td>总价</td>
+           <td>操作</td>
+       </tr>
+  
+       <tr ng-repeat="item in items">
+           <td>{{item.title}}</td>
+           <td><input ng-model="item.quantity"></td>
+           <td>{{item.price|currency}}</td>
+           <td>{{item.price*item.quantity|currency}}</td>
+           <td><button ng-click="remove(index)">删除</button></td>
+           <!-- 这里有ng-click 事件  是交给angular 处理的 -->
+       </tr>
+        
+ 
+    </table>
+</div>
+
+   <script type="text/javascript" src="js/angular.js"></script>
+   <script type="text/javascript" src="controllers/controller.js" ></script>
+</body>
+</html>
