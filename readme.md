@@ -2,6 +2,17 @@
 ---
 交流分享会使用到的ppt & 资料
 
+Download
+---
+
+* 方法1：  
+```shell
+git clone https://github.com/Jayin/wyu-dev-2014.git  
+```
+
+* 方法2：  
+点击右边的`Download Zip`
+
 上午 9:00-11:00
 ==
 
